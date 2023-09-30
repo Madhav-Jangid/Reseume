@@ -51,6 +51,10 @@ blingButton.addEventListener('click', function () {
 function VeiwResume() {
     document.getElementById('main').style.filter = 'blur(5px)';
     document.getElementById('resume').style.display = 'block';
+    document.getElementById('closebtn').addEventListener('click', function () {
+        document.getElementById('main').style.filter = 'none';
+        document.getElementById('resume').style.display = 'none';
+    })
 }
 
 var check = false;
@@ -87,3 +91,27 @@ function ButtonHover() {
 }
 
 ButtonHover();
+
+
+
+
+function TypingAnimation() {
+    const typedText = document.querySelector('.typed-text');
+    const cursor = document.querySelector('.cursor');
+    const messages = ["Greetings🙏 Sir/Mam.. Join me on this exciting journey🚀 where I'll be honing my web development skills💻. Together🤝 we'll learn, innovate, and create amazing web projects. Lets embark on this internship adventure and build a bright future in web development! "];
+    let currentMessageIndex = 0;
+    let currentCharacterIndex = 0;
+
+    function typeMessage() {
+        if (currentCharacterIndex < messages[currentMessageIndex].length) {
+            typedText.textContent += messages[currentMessageIndex].charAt(currentCharacterIndex);
+            currentCharacterIndex++;
+            setTimeout(typeMessage, 35);
+        } else {
+            cursor.style.display = 'none';
+        }
+    }
+    typeMessage();
+}
+
+TypingAnimation();

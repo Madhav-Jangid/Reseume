@@ -4,16 +4,73 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Resume</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Welcome At Madhav's Place</title>
+    <link rel="stylesheet" href="assets\css\style.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 
 <body>
-    <div id="resume">
+
+
+    <div id="main">
         <div class="header">
-            <div class="imgdiv"><img src="My Image.jpg" alt="My Image" id="Image"></div>
-            <div class="details">
+            <div class="nav">
+                <div class="left-ele">
+                    <h1>Madhav Jangid</h1>
+                </div>
+                <div class="mid-ele cmn">
+                    <a class="nav-link" href="#">Home</a>
+                    <a class="nav-link" href="#" onclick="VeiwResume()">Resume</a>
+                    <a class="nav-link" href="#">Projects</a>
+                    <a class="nav-link" href="#">Skills</a>
+                </div>
+                <div class="right-ele cmn">
+                    <button id="bling"><i class='bx bx-glasses-alt nav-link'></i></button>
+                    <div class="switch">
+                        <label class="theme-switch" for="checkbox">
+                            <input type="checkbox" id="checkbox" / onclick="ChangeTheme()">
+                            <div class="slider round"></div>
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="content">
+
+            <div id="imghldr"><img id="img2" src="assets\images\My Image 1.jpg" alt=""></div>
+
+            <h3 id="XYS">Hello... It's Me</h3>
+            <span class="text"></span>
+            <p>Welcome Sir/Mam.. Join me on this exciting journey where I'll be honing my web development skills. Together,
+                we'll learn, innovate, and create amazing web projects. Let's embark on this internship adventure and
+                build a bright future in web development!
+            </p>
+
+            <div class="home-sci">
+                <a href="https://github.com/Madhav-Jangid" style="--i:7" class='bx bxl-github'></a>
+                <a href="https://www.instagram.com/0001._.jangra/" style="--i:8" class='bx bxl-instagram'></a>
+                <a href="https://youtube.com/@LEGENDERS_SHOWDOWN_0001?si=QmfhMXbl3LXv9tr3" style="--i:9"
+                    class='bx bxl-youtube'></a>
+                <a href="https://www.linkedin.com/in/madhav-jangid/" style="--i:10" class='bx bxl-linkedin'></a>
+            </div>
+            <div class="buttons">
+                <a href="#about" id="btn1" class="btn-box">Download CV</a>
+                <a href="#" id="btn2" class="btn-box" onclick="VeiwResume()">Veiw CV</a>
+            </div>
+        </div>
+    </div>
+
+    <!--  
+    /*=============================================
+    =            Section comment block            =
+    =============================================*/
+    -->
+
+    <div id="resume">
+        <div class="resumeheader" id="resumeheader">
+            <div class="imgdiv"><img src="assets\images\My Image 2.jpg" alt="My Image" id="Image"></div>
+            <div class="resumedetails">
                 <h1>Madhav Jangid</h1>
                 <a href="mailto:manumadhavjangid@gmail.com">
                     <h5></h5><i class='bx bx-envelope'></i> manumadhavjangid@gmail.com</h5>
@@ -21,16 +78,83 @@
                 <a href="tel:+916239102762">
                     <h5></h5><i class='bx bx-phone'></i> +91 623910-2762</h5>
                 </a>
+                <div class="logo">
+                    <a href=""><i class='bx bxl-instagram' style="--i:1"></i></a>
+                    <a href=""><i class='bx bxl-linkedin' style="--i:2"></i></a>
+                    <a href=""><i class='bx bxl-github' style="--i:3"></i></a>
+                </div>
+            </div>
+
+        </div>
+
+
+        <div class="resumeskills">
+            <h2><i class='bx bx-subdirectory-right'></i> My Skills</h2>
+            <h3>Technical Skills</h3>
+            <div class="resumeskill-logo">
+                <i class='bx bxl-html5' style="color: rgb(255, 98, 0); --i:6"></i>
+                <i class='bx bxl-css3' style="color: rgb(0, 174, 255); --i:5"></i>
+                <i class='bx bxl-javascript' style="color: rgb(255, 242, 0); --i:4"></i>
+                <i class='bx bxl-python' style="color: rgb(0, 191, 255); --i:3"></i>
+                <i class='bx bxl-java' style="color: rgb(255, 47, 47); --i:2"></i>
+                <i class='bx bxl-c-plus-plus' style="color: blue; --i:1"></i>
+            </div>
+            <h3>Professional Skills</h3>
+            <div class="resumecontainer1">
+                <div class="grid">
+                    <div class="radial-bars">
+                        <svg x="0px" y="0px" viewBox="0 0 200 200">
+                            <circle class="progress-bar" cx="100" cy="100" r="80"></circle>
+                            <circle class="path path-1" cx="100" cy="100" r="80"></circle>
+                        </svg>
+                        <div class="percentage">90%</div>
+                        <div class="text">Creativity</div>
+                    </div>
+
+
+                    <div class="radial-bars">
+                        <svg x="0px" y="0px" viewBox="0 0 200 200">
+                            <circle class="progress-bar" cx="100" cy="100" r="80"></circle>
+                            <circle class="path path-2" cx="100" cy="100" r="80"></circle>
+                        </svg>
+                        <div class="percentage">75%</div>
+                        <div class="text">Communications</div>
+                    </div>
+
+
+                    <div class="radial-bars">
+                        <svg x="0px" y="0px" viewBox="0 0 200 200">
+                            <circle class="progress-bar" cx="100" cy="100" r="80"></circle>
+                            <circle class="path path-3" cx="100" cy="100" r="80"></circle>
+                        </svg>
+                        <div class="percentage">70%</div>
+                        <div class="text">Problem Solving</div>
+                    </div>
+
+
+                    <div class="radial-bars">
+                        <svg x="0px" y="0px" viewBox="0 0 200 200">
+                            <circle class="progress-bar" cx="100" cy="100" r="80"></circle>
+                            <circle class="path path-4" cx="100" cy="100" r="80"></circle>
+                        </svg>
+                        <div class="percentage">80%</div>
+                        <div class="text">TeamWork</div>
+                    </div>
+                </div>
             </div>
         </div>
 
 
-        <div class="education">
-            <h2><i class='bx bx-subdirectory-right' ></i> Education</h2>
-            <li><h4>High School</h4></li>
+        <div class="resumeeducation">
+            <h2><i class='bx bx-subdirectory-right'></i> Education</h2>
+            <li>
+                <h4>B.Tech, Computer Science & Engineering <br>
+                    Baba Farid Group Of Institutions <br>
+                    2022  2026</h4>
+            </li>
         </div>
     </div>
-    <script src="script.js"></script>
+    <script src="assets\js\script.js"></script>
 </body>
 
 </html>

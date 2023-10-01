@@ -54,10 +54,14 @@ function ChangeTheme() {
         root.style.setProperty('--text-dark', '#fff');
         root.style.setProperty('--background-dark', 'rgb(20, 21, 23)')
         root.style.setProperty('--black', '#000');
+        root.style.setProperty('--orange', '#0ef');
+        root.style.setProperty('--text-grey', '#f7b483');
     } else {
         root.style.setProperty('--text-dark', '#000');
         root.style.setProperty('--background-dark', '#fff')
         root.style.setProperty('--black', '#fff');
+        root.style.setProperty('--orange', 'navy');
+        root.style.setProperty('--text-grey', 'blue');
 
     }
     check = !check;

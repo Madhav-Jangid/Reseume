@@ -110,7 +110,7 @@ function VeiwProjects() {
 function TypingAnimation() {
     const typedText = document.querySelector('.typed-text');
     const cursor = document.querySelector('.cursor');
-    const messages = ["Greetings! 🙏 I'm excited to embark on this thrilling web development journey 🚀, where I'll be honing my skills in front-end and back-end development. I'm looking forward to learning, innovating, and collaborating on exciting web projects. Let's team up and create a bright future in web development together! 🤝💻"];
+    const messages = ["Greetings! 🙏 I'm excited to embark on this thrilling web development journey 🚀, where I'll be honing my skills in Web Development. I'm looking forward to learning, innovating, and collaborating on exciting web projects. Let's team up and create a bright future in web development together! 🤝💻"];
     let currentMessageIndex = 0;
     let currentCharacterIndex = 0;
 

@@ -59,7 +59,7 @@
 	font-weight: 400;
 }
 
-#closebtn{
+.closebtn{
 	position: absolute;
 	right: 10px;
 	top: 10px;

@@ -7,6 +7,7 @@
     <title>Welcome At Madhav's Place</title>
     <link rel="stylesheet" href="assets\css\style.css">
     <link rel="stylesheet" href="assets\css\resume.css">
+    <link rel="stylesheet" href="assets\css\Project.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 
@@ -20,10 +21,9 @@
                     <h1>Madhav Jangid</h1>
                 </div>
                 <div class="mid-ele cmn">
-                    <a class="nav-link" href="#">Home</a>
+                    <a class="nav-link" href="index.html">Home</a>
                     <a class="nav-link" href="#" onclick="VeiwResume()">Resume</a>
-                    <a class="nav-link" href="#">Projects</a>
-                    <a class="nav-link" href="#">Skills</a>
+                    <a class="nav-link" href="#" onclick="VeiwProjects()">Projects</a>
                 </div>
                 <div class="right-ele cmn">
                     <button id="bling"><i class='bx bx-glasses-alt nav-link'></i></button>
@@ -55,11 +55,66 @@
                 <a href="https://www.linkedin.com/in/madhav-jangid/" style="--i:10" class='bx bxl-linkedin'></a>
             </div>
             <div class="buttons">
-                <a href="#about" id="btn1" class="btn-box">Download CV</a>
+                <a href="assets\images\Madhav's Resume.pdf" id="btn1" class="btn-box" download="">Download CV</a>
                 <a href="#" id="btn2" class="btn-box" onclick="VeiwResume()">Veiw CV</a>
             </div>
         </div>
     </div>
+
+    <section id="projects">
+        <div class="allcards">
+            <div><button id="btnX">&times;</button></div>
+            <div class="card-container">
+                <div class="card">
+                    <div class="card-front">
+                        <img src="assets\images\Project 1.png" alt="Project1" class="Project-Images">
+                    </div>
+                    <div class="card-back">
+                        <h2>E-GramSangam</h2>
+                        <p>This is a E-portal Which Enhances Education in rural Areas</p>
+                        <a href="https://madhav-jangid.github.io/E-Portal-official/">Live Demo</a>
+                    </div>
+                </div>
+            </div>
+            <div class="card-container">
+                <div class="card">
+                    <div class="card-front">
+                        <img src="assets\images\Project 2.png" alt="Project2" class="Project-Images">
+                    </div>
+                    <div class="card-back">
+                        <h2>My Portfolio</h2>
+                        <p>This is My personal Porfolio website</p>
+                        <a href="https://madhav-jangid.github.io/Portfolio/">Live Demo</a>
+                    </div>
+                </div>
+            </div>
+            <div class="card-container">
+                <div class="card">
+                    <div class="card-front">
+                        <img src="assets\images\Project 3.png" alt="Project3" class="Project-Images">
+                    </div>
+                    <div class="card-back">
+                        <h2>To-Do List App</h2>
+                        <p>This is a To-Do App that helps to mentain our Daily life Tasks</p>
+                        <a href="https://madhav-jangid.github.io/ToDo_List/">Live Demo</a>
+                    </div>
+                </div>
+            </div>
+            <div class="card-container">
+                <div class="card">
+                    <div class="card-front">
+                        <img src="assets\images\Project 4.png" alt="Project" class="Project-Images">
+                    </div>
+                    <div class="card-back">
+                        <h2>Crypto Price Checker</h2>
+                        <p>This is App tells Real time Price of Crypto Currency</p>
+                        <a href="https://madhav-jangid.github.io/Crypto-prices/">Live Demo</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
 
     <!--  
     /*=============================================
@@ -68,7 +123,7 @@
     -->
     <section id="resume">
         <div class="container">
-            <div><button id="closebtn">&times;</button></div>
+            <div><button class="closebtn">&times;</button></div>
             <div class="profile">
                 <div class="profile_container">
                     <div class="profile_profileImg">

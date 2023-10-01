@@ -31,13 +31,13 @@ blingButton.addEventListener('click', function () {
 
 
 function VeiwResume() {
-    var close = document.getElementById('closebtn');
+    var close = document.querySelector('.closebtn');
     document.getElementById('main').style.filter = 'blur(5px)';
     document.querySelector('.container').style.display = 'grid';
     document.querySelector('.container').classList.remove('slideBottom');
     document.querySelector('.container').classList.add('slideTop');
 
-    close.addEventListener('click',function () {
+    close.addEventListener('click', function () {
         document.getElementById('main').style.filter = 'none';
         document.querySelector('.container').classList.remove('slideTop');
         document.querySelector('.container').classList.add('slideBottom');
@@ -87,7 +87,24 @@ function ButtonHover() {
 
 ButtonHover();
 
+function VeiwProjects() {
+    const close = document.getElementById('btnX');
+    const prjct = document.querySelector('.allcards');
+    document.getElementById('main').style.filter = 'blur(5px)';
+    prjct.style.display = 'flex';
+    prjct.classList.remove('slideBottom');
+    prjct.classList.add('slideTop');
 
+    close.addEventListener('click', function () {
+        document.getElementById('main').style.filter = 'none';
+        prjct.classList.remove('slideTop');
+        prjct.classList.add('slideBottom');
+        prjct.addEventListener('animationend', function () {
+            prjct.style.display = 'none';
+            prjct.classList.remove('slideBottom');
+        }, { once: true });
+    });
+}
 
 
 function TypingAnimation() {

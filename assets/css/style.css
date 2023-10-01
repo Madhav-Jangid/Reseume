@@ -9,12 +9,13 @@
 
 html,
 body {
+    
     background-color: var(--background-dark);
     color: var(--text-dark);
     font-family: 'Montserrat', sans-serif;
 }
 
-.all {
+#main {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -192,9 +193,9 @@ input:checked+.slider:before {
     border-radius: 50%;
 }
 
-.content {
+.Maincontent {
     position: relative;
-    margin: 0 auto;
+    margin: 0 20px;
     padding-top: 4rem;
     display: flex;
     justify-content: center;
@@ -311,380 +312,6 @@ input:checked+.slider:before {
 }
 
 
-/*=============================================
-=               Resume Section                =
-=============================================*/
-
-#close {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 30px;
-    background-color: var(--text-dark);
-    width: 2rem;
-    height: 2rem;
-    border-radius: 50%;
-    position: inherit;
-    top: 5px;
-    right: 5px;
-}
-
-#closebtn {
-    font-size: 30px;
-    background: transparent;
-    border: none;
-    color: var(--black);
-}
-
-h2 {
-    font-size: 28px;
-    padding: 10px 0;
-    position: absolute;
-    left: 20px;
-    text-decoration: 3px underline var(--text-dark);
-    color: var(--orange);
-    text-underline-offset: 8px;
-
-}
-
-#resume {
-    z-index: 9999;
-    display: none;
-    width: 100%;
-    height: 100%;
-    max-width: 920px;
-    max-height: 1200px;
-    border-radius: 20px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: var(--background-dark);
-    border: 3px solid var(--orange);
-    box-shadow: 0 20px 40px #000, 0 20px 40px #000;
-    overflow-y: scroll;
-    overflow-x: hidden;
-    animation: .4s slideLeft ease-in;
-}
-
-
-.resumeheader {
-    width: 100%;
-    height: 13rem;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    border-bottom: 3px solid;
-    box-shadow: 10px 0 23px;
-    position: static;
-    z-index: 9;
-}
-
-.imgdiv {
-    width: 100%;
-    height: 100%;
-    max-width: 10rem;
-    max-height: 10rem;
-    border-radius: 50%;
-    border: 3px solid var(--orange);
-    box-shadow: 0 0 25px var(--orange);
-    margin: 30px;
-    overflow: hidden;
-
-}
-
-#Image {
-    width: 10rem;
-    transition: 0.6s all ease;
-}
-
-#Image:hover {
-    scale: 130%;
-}
-
-.resumedetails {
-    text-align: right;
-    margin: 30px;
-    color: var(--orange);
-    display: flex;
-    flex-direction: column;
-    line-height: 2rem;
-}
-
-.resumedetails h1 {
-    font-size: 37px;
-    padding-bottom: 13px;
-    text-decoration: underline var(--text-dark);
-    text-underline-offset: 13px;
-}
-
-.resumedetails a {
-    color: var(--orange);
-    text-decoration: none;
-}
-
-.resumedetails a:hover {
-    color: var(--text-dark);
-}
-
-.resumedetails h5 {
-    padding-top: 5px;
-    animation: slideTop .5s ease forwards;
-}
-
-.logo i {
-    margin-top: 10px;
-    font-size: 20px;
-    padding: 0 10px;
-    transition: 0.3s all ease;
-    animation: slideTop .5s ease forwards;
-    animation-delay: calc(.2s * var(--i));
-}
-
-.logo i:hover {
-    scale: 150%;
-    color: var(--text-dark);
-    background-color: transparent;
-    border: none;
-    box-shadow: none;
-}
-
-.resumeskills {
-    margin: 90px 0;
-    display: flex;
-    flex-wrap: wrap;
-    padding: 30px;
-    flex-direction: column;
-}
-
-.resumeskills h2 {
-    position: absolute;
-    left: 20px;
-    top: 15rem;
-}
-
-.resumeskills h3 {
-    margin: 20px;
-    color: var(--text-dark);
-    text-decoration: 2px underline var(--orange);
-    text-underline-offset: 14px;
-}
-
-.resumeskill-logo {
-    display: flex;
-    padding-left: 30px;
-}
-
-.resumeskill-logo i {
-    font-size: 30px;
-    margin-left: 20px;
-    padding: 20px 10px;
-    animation: slideRight .5s ease forwards;
-    animation-delay: calc(.2s * var(--i));
-    transition: 0.3s all ease;
-}
-
-.resumeskill-logo i:hover {
-    scale: 150%;
-}
-
-.grid {
-    display: flex;
-    padding: 10px 20px;
-    flex-wrap: wrap;
-}
-
-.radial-bars {
-    position: relative;
-    width: 150px;
-    height: 150px;
-    margin-top: 20px;
-}
-
-.radial-bars svg {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%) rotate(-90deg);
-    width: 120px;
-    height: 160px;
-}
-
-.progress-bar {
-    fill: none;
-    stroke-width: 15;
-}
-
-.percentage {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 18px;
-    font-weight: bold;
-    color: var(--text-dark);
-}
-
-.text {
-    margin-top: 10px;
-    font-size: 16px;
-    font-weight: bold;
-    color: var(--text-dark);
-}
-
-.path {
-    stroke-width: 10;
-    stroke: var(--orange);
-    fill: transparent;
-    stroke-dasharray: 502;
-    stroke-dashoffset: 502;
-    stroke-linecap: round;
-}
-
-.path-1 {
-    animation: animate-path1 1s 1s linear forwards;
-}
-
-.path-2 {
-    animation: animate-path2 1s 1s linear forwards;
-}
-
-.path-3 {
-    animation: animate-path3 1s 1s linear forwards;
-}
-
-.path-4 {
-    animation: animate-path4 1s 1s linear forwards;
-}
-
-.radial-bar .percentage {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 17px;
-    font-weight: 500;
-    animation: showText 0.5s 1s linear forwards;
-    opacity: 0;
-}
-
-.radial-bars .text {
-    width: 100%;
-    position: absolute;
-    text-align: center;
-    left: 51%;
-    bottom: -5px;
-    transform: translateX(-50px);
-    font-size: 17px;
-    font-weight: 500;
-    margin: -11px;
-    margin-left: -27px;
-    animation: showText 0.5s 1s linear forwards;
-    opacity: 0;
-}
-
-.projects {
-    perspective: 1000px;
-    height: 85vh;
-    margin-top: -3.6rem;
-}
-
-.projects h2{
-    padding-bottom: 30px;
-}
-
-.all-cards{
-    position: absolute;
-    margin-top: 5rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-}
-
-.card {
-    width: 300px;
-    height: 200px;
-    margin: 20px 40px;
-    transform-style: preserve-3d;
-    transition: transform 1.2s;
-}
-
-.card:hover {
-    transform: rotateY(180deg);
-}
-
-.card-front,
-.card-back {
-    border-radius: 10px;
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    backface-visibility: hidden;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: #fff;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-}
-
-.card-back {
-    transform: rotateY(180deg);
-}
-
-
-.education{
-    height: 55vh;
-    display: flex;
-    justify-content: start;
-    flex-direction: column;
-    padding: 20px;
-}
-
-.education div{
-    margin: 4.5rem 2rem;
-}
-
-.education div li{
-    padding-bottom: 20px;
-    font-size: 20px;
-    line-height: 35px;
-}
-
-.education div li span{
-    font-weight: 600;
-    padding-right: 20px;
-    text-decoration: 2px underline var(--orange);
-    text-underline-offset: 8px;
-}
-
-.training{
-    position: relative;
-    margin-top: 7rem;
-    display: flex;
-    height: 40vh;
-}
-
-.trn-details{
-    margin: 5rem;
-    font-size: 20px;
-}
-
-.trn-details li{
-    padding-bottom: 20px;
-    font-size: 20px;
-    line-height: 35px;
-}
-
-.trn-details li span{
-    ont-weight: 600;
-    padding-right: 20px;
-    text-decoration: 2px underline var(--orange);
-    text-underline-offset: 8px;
-}
-
 @keyframes slideRight {
     0% {
         transform: translateX(-100px);
@@ -724,11 +351,10 @@ h2 {
 @keyframes animate {
     0% {
         width: 0;
-        /* or any initial value */
     }
 
     100% {
-        /*         width: 100%; */
+        width: 100%;
     }
 }
 
@@ -769,9 +395,6 @@ h2 {
         ;
     }
 }
-
-
-/*=====  End of Section comment block  ======*/
 
 
 

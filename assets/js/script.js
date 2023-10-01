@@ -25,12 +25,12 @@ const blingButton = document.getElementById('bling');
 const resume = document.getElementById('resume');
 const root = document.documentElement;
 
-if (currentTheme) {
-    document.documentElement.setAttribute('data-theme', currentTheme);
-    if (currentTheme === 'dark') {
-        toggleSwitch.checked = true;
-    }
-}
+// if (currentTheme) {
+//     document.documentElement.setAttribute('data-theme', currentTheme);
+//     if (currentTheme === 'dark') {
+//         toggleSwitch.checked = true;
+//     }
+// }
 
 function update(e) {
     var x = e.clientX || e.touches[0].clientX;
@@ -49,11 +49,20 @@ blingButton.addEventListener('click', function () {
 
 
 function VeiwResume() {
+    var close = document.getElementById('closebtn');
     document.getElementById('main').style.filter = 'blur(5px)';
-    document.getElementById('resume').style.display = 'block';
-    document.getElementById('closebtn').addEventListener('click', function () {
+    document.querySelector('.container').style.display = 'grid';
+    document.querySelector('.container').classList.remove('slideBottom');
+    document.querySelector('.container').classList.add('slideTop');
+
+    close.addEventListener('click',function () {
         document.getElementById('main').style.filter = 'none';
-        document.getElementById('resume').style.display = 'none';
+        document.querySelector('.container').classList.remove('slideTop');
+        document.querySelector('.container').classList.add('slideBottom');
+        setTimeout(() => {
+            document.querySelector('.container').style.display = 'none';
+            myDiv.classList.remove('slideBottom');
+        }, 500);
     })
 }
 

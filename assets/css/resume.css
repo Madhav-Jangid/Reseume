@@ -302,8 +302,23 @@
 	margin-top: 2rem;
 }
 
+.why{
+	margin-top: 4rem;
+}
+
 .contact {
 	margin-top: 3rem;
+}
+
+.description a{
+	color: var(--text-dark);
+	text-decoration: none;
+}
+
+.description a:hover{
+	color: var(--text-grey);
+	text-decoration: 2px underline var(--text-dark);
+	text-underline-offset: 10px;
 }
 
 

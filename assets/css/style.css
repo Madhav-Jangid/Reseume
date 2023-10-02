@@ -420,6 +420,14 @@ input:checked+.slider:before {
     border: 1px solid var(--text-dark);
 }
 
+.slideLeft {
+    animation-name: slideLeft;
+}
+
+.slideRight {
+    animation-name: slideRight;
+}
+
 
 
 @media (max-width:600px) {
@@ -455,6 +463,10 @@ input:checked+.slider:before {
         border: 1px solid var(--black);
     }
 
+    #btn2{
+        margin-top: 0.5rem;
+    }
+
     .content {
         padding-top: 2rem;
     }
@@ -463,13 +475,6 @@ input:checked+.slider:before {
         margin: 20px 20px;
     }
 
-    .slideLeft {
-        animation-name: slideLeft;
-    }
-
-    .slideRight {
-        animation-name: slideRight;
-    }
 
 }
 
@@ -478,8 +483,36 @@ input:checked+.slider:before {
         font-size: 25px;
     }
 
+    .menudiv {
+        display: block;
+    }
+
+    .menudiv button {
+        display: block;
+        background-color: var(--text-dark);
+        color: var(--black);
+    }
+
     .mid-ele {
-        font-size: 10px;
+        display: flex;
+        position: absolute;
+        top: 6rem;
+        right: -12rem;
+        flex-direction: column;
+        background-color: var(--text-dark);
+        animation-duration: .3s;
+    }
+
+    .mid-ele a {
+        text-align: center;
+        width: 10rem;
+        padding: 7px 0;
+        color: var(--black);
+        border: 1px solid var(--black);
+    }
+
+    #btn2{
+        margin-top: 0.5rem;
     }
 
     .content {

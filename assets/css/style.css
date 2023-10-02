@@ -9,7 +9,7 @@
 
 html,
 body {
-    
+
     background-color: var(--background-dark);
     color: var(--text-dark);
     font-family: 'Montserrat', sans-serif;
@@ -398,6 +398,28 @@ input:checked+.slider:before {
     }
 }
 
+.menudiv {
+    display: none;
+    position: absolute;
+    top: 6.1rem;
+    right: -1.8rem;
+    animation: .2s slideLeft linear;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    animation-duration: .2s;
+}
+
+.menudiv button {
+    display: none;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 8px 0 0 8px;
+    font-size: 24px;
+    outline: none;
+    border: 1px solid var(--text-dark);
+}
+
 
 
 @media (max-width:600px) {
@@ -405,8 +427,32 @@ input:checked+.slider:before {
         font-size: 25px;
     }
 
+    .menudiv {
+        display: block;
+    }
+
+    .menudiv button {
+        display: block;
+        background-color: var(--text-dark);
+        color: var(--black);
+    }
+
     .mid-ele {
-        display: none;
+        display: flex;
+        position: absolute;
+        top: 6rem;
+        right: -12rem;
+        flex-direction: column;
+        background-color: var(--text-dark);
+        animation-duration: .3s;
+    }
+
+    .mid-ele a {
+        text-align: center;
+        width: 10rem;
+        padding: 7px 0;
+        color: var(--black);
+        border: 1px solid var(--black);
     }
 
     .content {
@@ -415,6 +461,14 @@ input:checked+.slider:before {
 
     #resume {
         margin: 20px 20px;
+    }
+
+    .slideLeft {
+        animation-name: slideLeft;
+    }
+
+    .slideRight {
+        animation-name: slideRight;
     }
 
 }
@@ -450,8 +504,13 @@ input:checked+.slider:before {
 }
 
 @keyframes typing {
-    from { width: 0; }
-    to { width: 100%; }
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 100%;
+    }
 }
 
 @keyframes blink {

@@ -12,6 +12,32 @@ const social = document.querySelectorAll('.bx');
 const blingButton = document.getElementById('bling');
 const resume = document.getElementById('resume');
 const root = document.documentElement;
+const Burger = document.getElementById('BurgerMenu');
+const menudiv = document.querySelector('.menudiv');
+const midnav = document.getElementById('nav-2');
+
+var cond = false;
+Burger.addEventListener('click', function () {
+    if (cond) {
+        midnav.style.right = '-12rem'
+        menudiv.style.right = '-2rem'
+        Burger.innerHTML = `<i class='bx bx-menu'></i>`
+        menudiv.classList.remove('slideLeft');
+        menudiv.classList.add('slideRight');
+        midnav.classList.remove('slideLeft');
+        midnav.classList.add('slideRight');
+    } else {
+        midnav.style.right = '-2rem'
+        menudiv.style.right = '7.9rem'
+        Burger.innerHTML = 'X'
+        menudiv.classList.remove('slideRight');
+        menudiv.classList.add('slideLeft');
+        midnav.classList.remove('slideRight');
+        midnav.classList.add('slideLeft');
+    }
+    cond = !cond;
+})
+
 
 
 function update(e) {

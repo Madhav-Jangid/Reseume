@@ -402,7 +402,7 @@ input:checked+.slider:before {
     display: none;
     position: absolute;
     top: 6.1rem;
-    right: -1.8rem;
+    right: -1.5rem;
     animation: .2s slideLeft linear;
     display: flex;
     justify-content: center;
